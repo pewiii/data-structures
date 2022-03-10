@@ -2,8 +2,7 @@ var Tree = function(value) {
   var newTree = {};
   newTree.value = value;
 
-  // your code here
-  newTree.children = [];  // fix me
+  newTree.children = [];
   Object.setPrototypeOf(newTree, treeMethods);
   return newTree;
 };
@@ -16,10 +15,8 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
-  //var result = false;
   var childNode = function(tree) {
     if (tree.value === target) {
-      //result = true;
       return true;
     }
     for (var i = 0; i < tree.children.length; i++) {
@@ -30,7 +27,6 @@ treeMethods.contains = function(target) {
     return false;
   };
   return childNode(this);
-  //return result;
 };
 
 /*

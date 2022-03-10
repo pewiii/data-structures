@@ -12,32 +12,6 @@ var binaryTreeMethods = {};
 
 binaryTreeMethods.insert = function(value) {
   var newNode = BinarySearchTree(value);
-  // if (this.root === null) {
-  //   this.root = newNode;
-  //   return this;
-  // } else {
-  //   var current = this.root;
-  //   while (true) {
-  //     if (value === current.value) {
-  //       return undefined;
-  //     }
-  //     if (value < current.value) {
-  //       if (current.left === null) {
-  //         current.left = newNode;
-  //         return this;
-  //       } else {
-  //         current = current.left;
-  //       }
-  //     } else if (value > current.value) {
-  //       if (current.right === null) {
-  //         current.right = newNode;
-  //         return this;
-  //       } else {
-  //         current = current.right;
-  //       }
-  //     }
-  //   }
-  // }
   var helper = function(tree) {
     if (value < tree.value) {
       if (tree.left === null) {
