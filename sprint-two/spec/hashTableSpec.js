@@ -73,4 +73,10 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+
+  it('should not contain number values that were removed', function() {
+    hashTable.insert(6, 10);
+    hashTable.remove(10);
+    expect(hashTable.retrieve(10)).to.equal(undefined);
+  });
 });

@@ -10,17 +10,10 @@ var LinkedList = function () {
       list.head = tail;
       list.tail = tail;
     } else {
-      // list.tail = list.head;
-      // while (list.tail.next) {
-      //   list.tail = list.tail.next;
-      // }
-      // list.tail.next = tail;
       this.tail.next = tail;
       this.tail = this.tail.next;
-
     }
     return tail;
-
   };
 
   list.removeHead = function () {
@@ -60,8 +53,14 @@ var Node = function (value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ *
+ * addToTail = Constant
+ * removeHead = Constant
+ * contains = Linear
+ *
+ *
  */
-var linkedOne = new LinkedList();
-linkedOne.addToTail(100);
-linkedOne.addToTail(200);
-console.log(linkedOne.tail.value);
+// var linkedOne = new LinkedList();
+// linkedOne.addToTail(100);
+// linkedOne.addToTail(200);
+// console.log(linkedOne.tail.value);
