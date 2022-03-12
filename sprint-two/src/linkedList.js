@@ -12,8 +12,10 @@ var LinkedList = function () {
     } else {
       this.tail.next = tail;
       this.tail = this.tail.next;
+
     }
     return tail;
+
   };
 
   list.removeHead = function () {
@@ -56,7 +58,7 @@ var Node = function (value) {
  *
  * addToTail = Constant
  * removeHead = Constant
- * contains = Linear
+ * contains = linear
  *
  *
  */
