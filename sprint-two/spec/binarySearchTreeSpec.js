@@ -46,4 +46,15 @@ describe('binarySearchTree', function() {
     expect(binarySearchTree.left.right.value).to.equal(4);
     expect(binarySearchTree.right.left.value).to.equal(7);
   });
+
+  it('should log every value in the tree', function() {
+    var array = [];
+    var func = function(value) { array.push(value); };
+    binarySearchTree.insert(2);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(7);
+    binarySearchTree.depthFirstLog(func);
+    expect(array).to.eql([5, 2, 3, 7]);
+    binarySearchTree.breadthFirstLog();
+  });
 });
